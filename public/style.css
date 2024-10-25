@@ -513,7 +513,7 @@ h2 {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 20px;
+  padding: 15px;
 }
 
 #formContent {
@@ -528,6 +528,7 @@ h2 {
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
+  margin-top: 1px;
 }
 
 #formFooter {
@@ -740,6 +741,10 @@ input[type=text]:placeholder {
   box-sizing: border-box;
 }
 
-.inactiveunderlineHover {
-
+#img-res { 
+    background-image: url('/imagenes/pexels-optical-chemist-340351297-15597164.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
 }
