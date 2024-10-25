@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"> <!-- Cambiado a /style.css -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mercedes</title>
+</head>
+<body>
+
+    <!-- Navbar (No Mover) -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="navbar-brand" href="#">Mercedes</a>
+        <img src="/imagenes/iconos/mb-star-svg.svg" alt="Mercedes" width="40px" id="Img-Logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Comprar">Comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Reserva">Servicios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <img src="imagenes/pexels-muhammet-rasit-kaplan-567497779-17241886.jpg" class="img-fluid" alt="Mercedes Logo">
+
+    <h1 id="h1nuestos">Nuestros Modelos</h1>
+    <!-- Cartas de Nuevos Modelos -->
+    <div class="custom-card-wrapper">
+        <div class="custom-card">
+            <img src="imagenes/A-Class Sedan.webp" alt="Mercedes-Benz AMG EQS 53">
+            <div class="custom-card-info">
+                <h2>A-Class Sedan</h2>
+                <p>Iniciando desde USD$ 81,900.00</p>
+                <a href="#" class="custom-button">Explora ahora</a>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="imagenes/C-Class Sedan.webp" alt="Garaje Mágico">
+            <div class="custom-card-info">
+                <h2>C-Class Sedan</h2>
+                <p>Iniciando desde USD$ 89,900.00</p>
+                <a href="#" class="custom-button">Explora ahora</a>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="imagenes/EQS-Sedan.webp" alt="EQE de Mercedes-Benz EQ">
+            <div class="custom-card-info">
+                <h2>EQS Sedan</h2>
+                <p>Iniciando desde USD$ 185,900.00</p>
+                <a href="#" class="custom-button">Explora ahora</a>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="imagenes/S-Class-Sedan.webp" alt="Mercedes-Benz Concept">
+            <div class="custom-card-info">
+                <h2>S-Class Sedan</h2>
+                <p>A partir de USD$ 185,000.00</p>
+                <a href="#" class="custom-button">Explora ahora</a>
+            </div>
+        </div>
+    </div>
+                    <!-- Fin de las cartas de modelos -->
+    <h1 id="h1spot">En el Spotlight</h1>
+
+    <p id="Dnm">Descubra lo nuevo de Mercedes</p>
+
+    <!-- Inicio del nuevo carrusel de productos -->
+    <section>
+        <div id="productCarousel">
+            <div class="arrow" id="productPrev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="arrow" id="productNext"><i class="fa-solid fa-chevron-right"></i></div>
+            
+            <div id="productCarousel-vp">
+                <div id="productCarousel-inner">
+                    <article class="productCarousel-item">
+                        <img src="imagenes/descarga.jpeg" alt="EQS de Mercedes-AMG 53 4MATIC+">
+                        <div class="productInfos">
+                            <h3>EQS de Mercedes-AMG 53 4MATIC+</h3>
+                            <p id="EQSM">Esto es para ti, mundo.</p>
+                            <button type="button">Detalles</button>
+                        </div>
+                    </article>
+                    
+                    <article class="productCarousel-item">
+                        <img src="imagenes/cozy-home-interior-v0-9vmfdrsaslub1.jpg" alt="Garaje Mágico">
+                        <div class="productInfos">
+                            <h3>Bienvenido a garaje mágico</h3>
+                            <p id="GM">Un lugar donde el futuro de la movilidad está en casa.</p>
+                            <button type="button">Detalles</button>
+                        </div>
+                    </article>
+                    
+                    <article class="productCarousel-item">
+                        <img src="imagenes/EQE.webp" alt="Mercedes EQE">
+                        <div class="productInfos">
+                            <h3>EQE de Mercedes-Benz</h3>
+                            <p id="EQE">Esto es para todos los sentidos.</p>
+                            <button type="button">Detalles</button>
+                        </div>
+                    </article>
+                    
+                    <article class="productCarousel-item">
+                        <img src="imagenes/C-Class.webp" alt="C-Class">
+                        <div class="productInfos">
+                            <h3>Mercedes C-Class</h3>
+                            <p id="C-Class-C">Bienvenido a la zona de confort.</p>
+                            <button type="button">Detalles</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin del nuevo carrusel de productos -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Mercedes. Todos los derechos reservados.</p>
+    </footer>
+i
+    <script src="/script.js"></script> <!-- Vincula tu script aquí -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

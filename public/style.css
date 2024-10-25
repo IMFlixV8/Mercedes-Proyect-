@@ -1,0 +1,739 @@
+/* Barra de Navegación */
+.navbar {
+    background: #000000;
+  }
+  
+  
+  
+  /* Logo de mercedes en el navbar */
+  #Img-Logo {
+  margin-right: 100px;
+  }
+  
+  /* Cuero del DOC */
+  body {
+    background-color: #f5f5f5;
+  }
+  
+  
+  
+  
+  
+  
+  /* Estructura de las tarjetas */
+  .custom-card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Esto permite que las tarjetas se ajusten en varias filas si es necesario */
+  }
+  
+  .custom-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 22%; /* Ajustado para mostrar 4 tarjetas */
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .custom-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .custom-card-info {
+    padding: 20px;
+  }
+  
+  .custom-card-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .custom-card-info p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Fin de la estructura de las tarjetas */
+  
+  
+  /* Estilos para el día */
+  .day-theme {
+    background-color: #ffffff; /* Color de fondo para el día */
+    color: #000000; /* Color de texto para el día */
+  }
+  
+  .day-theme h1, .day-theme p {
+    color: #000000; /* Color de texto para los encabezados y párrafos durante el día */
+  }
+  
+  /* Estilos para la noche */
+  .night-theme {
+    background-color: #000000; /* Color de fondo para la noche */
+    color: #ecf0f1; /* Color de texto para la noche */
+  }
+  
+  .night-theme h1, .night-theme p {
+    color: #ecf0f1; /* Color de texto para los encabezados y párrafos durante la noche */
+  }
+  
+  /* Efecto de transición */
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
+  }
+  
+  #footer {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
+  }
+  
+  /* Estilos del footer en el día */
+  .day-theme #footer {
+    background-color: #f8f9fa; /* Color de fondo para el día */
+    color: #000000; /* Color de texto para el día */
+  }
+  
+  /* Estilos del footer en la noche */
+  .night-theme #footer {
+    background-color: #34495e; /* Color de fondo para la noche */
+    color: #ecf0f1; /* Color de texto para la noche */
+  }
+  
+  /* Titulo para SpotLight */
+  #h1spot { 
+    font-family: Scotch Deck Compressed Light;
+    margin: 8px;
+  }
+  
+  
+  /* Carrusel de cartas */
+  *,
+  ::before,
+  ::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #222;
+      font-family: Arial, sans-serif;
+  }
+  
+  #productCarousel {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+  }
+  
+  .arrow {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      z-index: 1;
+      font-size: 35px;
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: background 0.3s;
+  }
+  
+  .arrow:hover {
+      background: rgba(255, 255, 255, 0.9);
+  }
+  
+  #productPrev {
+      left: 10px;
+  }
+  
+  #productNext {
+      right: 10px;
+  }
+  
+  #productCarousel-vp {
+      width: 800px;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      margin: auto;
+  }
+  
+  @media (max-width: 800px) {
+      #productCarousel-vp {
+          width: 500px;
+      }
+  }
+  
+  @media (max-width: 500px) {
+      #productCarousel-vp {
+          width: 300px;
+      }
+  }
+  
+  #productCarousel-inner {
+      display: flex;
+      position: absolute;
+      transition: transform 0.3s ease-in-out;
+      gap: 15px;
+      left: 0;
+  }
+  
+  .productCarousel-item {
+      width: 270px;
+      height: 400px;
+      border: 2px solid white;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+  }
+  
+  .productCarousel-item:hover {
+      transform: scale(1.05);
+  }
+  
+  .productCarousel-item img {
+      width: 100%;
+      object-fit: cover; 
+      height: 250px; 
+  }
+  
+  .productInfos {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background: white;
+      color: black;
+      padding: 15px; 
+  }
+  
+  .productInfos h3 {
+      margin: 5px 0; 
+      font-size: large;
+      font-weight: bold;
+      margin-top: -10px;
+  }
+  
+  .productInfos button {
+      background: #007bff;
+      padding: 10px 30px; 
+      border-radius: 5px;
+      color: white;
+      font-size: small;
+      cursor: pointer;
+      transition: background 0.3s; 
+      border: none;
+  }
+  
+  .productInfos button:hover {
+      background: #0056b3; 
+  }
+  
+  /* fin del Carrusel de cartas */
+  
+  
+  /* h1 nuestros modelos */
+  #h1nuestos { 
+    font-family: Scotch Deck Compressed Light;
+    margin: 8px;
+    margin-top: 35px;
+  }
+  
+  /* Texto "Descubra lo nuevo de mercedes" */
+  
+  #Dnm { 
+  font-size: medium;
+  margin-top: -8px;
+  margin-left: 10px;
+  color: gray;
+  }
+  
+  /* Texto del carusel */
+  #EQSM { 
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  
+  #GM { 
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  
+  #EQE {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  
+  #C-Class-C { 
+  font-size: 15px;
+  margin-top: 15px;
+  }
+  
+    
+  /* Contenido de compra */
+  
+  
+  .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 23.5px 0;
+  }
+  
+  .tab-button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #2e2d2d;
+      margin: 0 10px;
+      font-size: 16px;
+      border-radius: 20px;
+  }
+  
+  .tab-button.active {
+      background-color: #333;
+      color: white;
+  }
+  .car-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.car-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+  #VD { 
+  margin-top: 60px;
+  margin-left: 8px;
+  color: gray;
+  }
+  
+  .DESC-A { 
+    margin-right: 200px;
+    font-size: small;
+  } 
+  
+
+  /* Estructura del contenido encima del fondo */
+  body {
+    background-color:  #ffffff;
+  }
+  
+  
+  button {
+    padding: 10px 20px;
+    background-color: #56baed;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+
+  
+  
+
+  #close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+#close-modal:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.close { 
+  cursor: pointer;
+}
+
+
+.modal-content {
+  margin: 2% auto; /* Ajustar el margen superior */
+}
+
+.oculto {
+  display: none;
+}
+
+.categoria {
+  grid-template-columns: repeat(3, 1fr); /* Muestra 3 autos por fila */
+  gap: 20px;
+}
+
+/* Cambia el diseño para mostrar 4 autos por fila en otras categorías si es necesario */
+.categoria.sedan {
+  grid-template-columns: repeat(4, 1fr); /* 4 autos por fila */
+}
+
+#modal-description { 
+margin-left: 10px;
+margin-top: 10px;
+Color: #56baed; 
+font-weight: bold;
+font-size: large;
+}
+
+/* login y regis */
+
+
+/* BASIC */
+
+html {
+  background-color: #56baed;
+}
+
+
+a {
+  color: #92badd;
+  display:inline-block;
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #cccccc;
+}
+
+
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: #39ace7;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#icon {
+  width:60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
