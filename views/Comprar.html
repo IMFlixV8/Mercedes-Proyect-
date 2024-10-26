@@ -8,6 +8,7 @@
     <title>Mercedes</title>
 </head>
 <body>
+
     <!-- Navbar (No Mover) -->
     <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" href="#">Mercedes</a>
@@ -26,7 +27,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Reserva">Servicios</a>
                 </li>
-                <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
             </ul>
         </div>
     </nav>
@@ -73,29 +73,22 @@
             <p>C 300 Berlina</p>
             <button class="info-button" onclick="showInfo('auto1')">Más info</button>
         </div>
-        <!-- Agrega más autos según sea necesario -->
     </div>
-    
     
     <!-- Pestaña de información -->
-<div id="info-modal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close" onclick="closeInfo()">&times;</span>
-        <h2 id="modal-title"></h2>
-        <img id="modal-image" src="" alt="Imagen del auto" 
-        style="width:100%; max-height: 300px;">
-        <p id="modal-description">hola</p>
-        <img id="modal-icon" src="" alt="" style="width: 30px;">
-        <p modal-dec2>Reserve este vehículo inmediatamente. Esperamos su visita para ver el vehículo y concluir su pedido con uno de nuestros vendedores, o puede continuar su compra en línea. Su reserva se deducirá del precio del vehículo si desea completar su compra.</p>
-        <button id="Reservar">Reservar</button>
-
-
+    <div id="info-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfo()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Imagen del auto" style="width:100%; max-height: 300px;">
+            <p id="modal-description">hola</p>
+            <img id="modal-icon" src="" alt="" style="width: 30px;">
+            <p modal-dec2>Reserve este vehículo inmediatamente. Esperamos su visita para ver el vehículo y concluir su pedido con uno de nuestros vendedores, o puede continuar su compra en línea. Su reserva se deducirá del precio del vehículo si desea completar su compra.</p>
+            <button id="Reservar">Reservar</button>
+        </div>
     </div>
-</div>
 
-
-    
-    <!-- footer -->
+    <!-- Footer -->
     <footer id="footer">
         <p>&copy; 2024 Mercedes. Todos los derechos reservados.</p>
     </footer>
@@ -104,5 +97,24 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Agrega el script para cambiar el modo -->
+    <script>
+        // Selecciona el botón y el body
+        const toggleButton = document.getElementById('toggle-mode');
+        const body = document.body;
+
+        // Función para cambiar el modo
+        toggleButton.addEventListener('click', function() {
+            body.classList.toggle('dark-mode'); // Alterna la clase 'dark-mode'
+
+            // Cambiar el contenido del botón
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Cambiar a Modo Claro'; // Cambia el texto del botón
+            } else {
+                toggleButton.textContent = 'Cambiar a Modo Oscuro'; // Restablece el texto del botón
+            }
+        });
+    </script>
 </body>
 </html>
