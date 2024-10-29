@@ -1,4 +1,3 @@
-
     document.addEventListener("DOMContentLoaded", function () {
         // Obtener la hora actual
         let hour = new Date().getHours();
