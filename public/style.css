@@ -654,8 +654,7 @@ input[type=text]:placeholder {
 
 #img-res { 
     background-image: url('/imagenes/pexels-optical-chemist-340351297-15597164.jpg');
-    text-align: center;
-    
+    object-fit: cover;
 }
 
 
