@@ -79,25 +79,6 @@
   /* Fin de la estructura de las tarjetas */
   
   
-  /* Estilos para el día */
-  .day-theme {
-    background-color: #ffffff; /* Color de fondo para el día */
-    color: #000000; /* Color de texto para el día */
-  }
-  
-  .day-theme h1, .day-theme p {
-    color: #000000; /* Color de texto para los encabezados y párrafos durante el día */
-  }
-  
-  /* Estilos para la noche */
-  .night-theme {
-    background-color: #000000; /* Color de fondo para la noche */
-    color: #ecf0f1; /* Color de texto para la noche */
-  }
-  
-  .night-theme h1, .night-theme p {
-    color: #ecf0f1; /* Color de texto para los encabezados y párrafos durante la noche */
-  }
   
   /* Efecto de transición */
   body {
@@ -110,17 +91,6 @@
     transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
   }
   
-  /* Estilos del footer en el día */
-  .day-theme #footer {
-    background-color: #f8f9fa; /* Color de fondo para el día */
-    color: #000000; /* Color de texto para el día */
-  }
-  
-  /* Estilos del footer en la noche */
-  .night-theme #footer {
-    background-color: #34495e; /* Color de fondo para la noche */
-    color: #ecf0f1; /* Color de texto para la noche */
-  }
   
   /* Titulo para SpotLight */
   #h1spot { 
@@ -476,9 +446,7 @@ font-size: large;
 
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
+
 
 
 a {
