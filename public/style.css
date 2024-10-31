@@ -10,14 +10,10 @@
   margin-right: 100px;
   }
   
-  /* Cuero del DOC */
+  /* Cuerpo del DOC */
   body {
     background-color: #f5f5f5;
   }
-  
-  
-  
-  
   
   
   /* Estructura de las tarjetas */
@@ -743,10 +739,8 @@ input[type=text]:placeholder {
 
 #img-res { 
     background-image: url('/imagenes/pexels-optical-chemist-340351297-15597164.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
     text-align: center;
+    
 }
 
 
